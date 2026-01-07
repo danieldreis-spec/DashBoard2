@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Operacional Completo</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-cyan: #06b6d4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('./images/background.png'); no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #334155;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            border-top: 4px solid var(--accent-blue);
+        }
+
+        .category-card h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+        }
+
+        .link-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .btn {
+            display: block;
+            padding: 10px 15px;
+            background-color: #334155;
+            color: #cbd5e1;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .btn:hover {
+            background-color: #475569;
+            transform: translateX(5px);
+            color: #fff;
+            border-left: 3px solid var(--accent-blue);
+        }
+
+        /* Cores Customizadas */
+        .cat-insumos { border-top-color: var(--accent-blue); }
+        .cat-forms { border-top-color: var(--accent-green); }
+        .cat-rh { border-top-color: var(--accent-purple); }
+        .cat-bi { border-top-color: var(--accent-orange); }
+        .cat-veiculos { border-top-color: var(--accent-red); }
+        .cat-sistemas { border-top-color: var(--accent-cyan); }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="./images/logo.png" alt="Logo insumos" style="height: 292px; margin-bottom: 30px;">
+    <p>GESTÃO DE INSUMOS - 2026</p>
+</header>
+
+<div class="container">
+
+    <div class="category-card cat-insumos">
+        <h2>📦 Planilhas de Insumos</h2>
+        <div class="link-grid">
+            <a href="https://docs.google.com/spreadsheets/d/1ovN1AHu9ZW5gjQaitEAOwvxwmwJcP43e/edit?gid=1963186997" target="_blank" class="btn">📊 Presença Insumos</a>
+            <a href="https://docs.google.com/spreadsheets/d/1g_MDy99Z8QYXGgvFlWGTnku73Ski5YlZDEsAFskdPh0/edit?gid=1833847677" target="_blank" class="btn">📥 Recebimento Insumos</a>
+            <a href="https://docs.google.com/spreadsheets/d/1g_MDy99Z8QYXGgvFlWGTnku73Ski5YlZDEsAFskdPh0/edit?gid=1825451329" target="_blank" class="btn">📦 PICK (Planilha)</a>
+            <a href="https://docs.google.com/spreadsheets/d/1wXcqwjDDgIIeeN0B9Nmi7JCSh7O4sfPT4vYyW5N5hv0/edit?gid=1306262406" target="_blank" class="btn">⬆️ Putway</a>
+            <a href="https://docs.google.com/spreadsheets/d/1mQ-Gf6uBp1sDHnECsnhiw0gQoZuTWraTypuKakKHwBw/edit?gid=1886131232" target="_blank" class="btn">↔️ Transferência</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ugDEWozIXJtqDk7BxawHMxxDYX9ne1wweGs0G6nmcAg/edit?gid=1406526947" target="_blank" class="btn">🔢 Contagem Inventário</a>
+            <a href="https://docs.google.com/spreadsheets/d/1g_MDy99Z8QYXGgvFlWGTnku73Ski5YlZDEsAFskdPh0/edit?gid=1471086472" target="_blank" class="btn">📉 DOH</a>
+            <a href="https://docs.google.com/spreadsheets/d/18UlSUWHjEprOlWvbnbKGj-pRq-iDdlvgEMRHKbeZbN4/edit?gid=0" target="_blank" class="btn">🏷️ Base LPN</a>
+            <a href="https://docs.google.com/spreadsheets/d/1U0aL1J_vkQZR5Xn67fHgfbwddNMkJ9oi0KL3lbx--Os/edit" target="_blank" class="btn">📝 Solicitação Insumos (DB)</a>
+        </div>
+    </div>
+
+    <div class="category-card cat-forms">
+        <h2>📝 Formulários (Input)</h2>
+        <div class="link-grid">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0vLtBB3wVo_wVdmuKqWTKCvdiyESambBRtduNFtcu9z6aCQ/viewform" target="_blank" class="btn">📝 Rec. Insumos</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSejRJFfqZ2oiPyQcCOcrF71cEUsUfbcnAlgMQgP4IKpFEO-IA/viewform" target="_blank" class="btn">📝 Putway</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHiL8xTJ5SnvDty0qoHo2i34_r6xhtoGzr7JHGtL8XXngAtQ/viewform" target="_blank" class="btn">📝 Transferência</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9Ze-pTnIIMOAbiFV6o17AForiaRqPXmpFwb1M54CTGkTpPg/viewform" target="_blank" class="btn">📝 Contagem/Solicitação</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeq9DusowFUI9et4IKpKQYaMz-tMm4QiemcIfL8xW6l6mu6zA/viewform" target="_blank" class="btn">📝 Entrada/Saída Materiais</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScjeGYpD9SlSg-_OEjF0N8eSZbJujEE_fjBiz6_2qsv11gh6w/viewform" target="_blank" class="btn">📝 Transfer entre CAD</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScjeGYpD9SlSg-_OEjF0N8eSZbJujEE_fjBiz6_2qsv11gh6w/viewform" target="_blank" class="btn">📝
+Picking</a> 
+        </div>
+    </div>
+
+    <div class="category-card cat-bi">
+        <h2>📊 Dashboards & BI</h2>
+        <div class="link-grid">
+            <a href="https://lookerstudio.google.com/reporting/e4eb056d-9e83-49c3-bc0e-8def757cdb85/page/Jlz9D" target="_blank" class="btn">📅 Programação Geral</a>
+            <a href="https://lookerstudio.google.com/reporting/ae33cb26-975b-43ae-83ea-a0d1d80b0f10/page/p_2jrcf0yizd" target="_blank" class="btn">👕 Programação Uniformes</a>
+            <a href="https://online.tableau.com/" target="_blank" class="btn">🎨 Tableau - Reversa V2</a>
+            <a href="https://docs.google.com/spreadsheets/d/1cbKVTU8UGzuVXpayVXFxQMMBJeZPUpU-dEygg2cBZuU/edit?gid=1313589074" target="_blank" class="btn">🛣️ Roadmap Insumos</a>
+            <a href="https://meli.sealsolutions.com.br/widget/index/Cc8g3yLO1TtV2UlW3yD3ag%25253d%25253d" target="_blank" class="btn">🔒 SEAL Solutions</a>
+        </div>
+    </div>
+
+    <div class="category-card cat-rh">
+        <h2>👤 RH & Materiais</h2>
+        <div class="link-grid">
+            <a href="https://docs.google.com/spreadsheets/d/1n8vd1UpGafwhb29_CYavTyMzjz-6OBT16LKufwThkKo/edit?gid=999209729" target="_blank" class="btn">🆕 Onboarding Nova</a>
+            <a href="https://docs.google.com/spreadsheets/d/1gYHJyXGnXYHu460zoDXgkTZnCUsiR_7CNhD6idHkUK8/edit?gid=2053986585" target="_blank" class="btn">👔 Estoque de Uniformes</a>
+            <a href="https://docs.google.com/spreadsheets/d/1MBg9n4kwq08l4UrZ2dKZ8iPUB12EBR9eC54GJDDZnRU/edit?gid=1296471679" target="_blank" class="btn">🔄 Controle Troca Uniforme</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScMLZxEi-NBm2nJclYdOQ5TMBaHQO5DrA2kiqcrNBC6AtPejA/viewform" target="_blank" class="btn">📝 Form Troca Uniforme</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLCDUV10SSJPuma8YSmWsmyCXjwvKwU89zjGnduImbP0Heug/viewform" target="_blank" class="btn">🪪 2ª Via Crachá</a>
+            <a href="https://docs.google.com/spreadsheets/d/1zdFg8CBo4PGpbJlbF1Jhhxcuq7fOGZPO2UcWxrDjkg8/edit?gid=0#gid=0" target="_blank" class="btn">🪪 inv semanal uniformes</a>
+        </div>
+    </div>
+
+    <div class="category-card cat-veiculos">
+        <h2>🚚 Veículos & Notas</h2>
+        <div class="link-grid">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScRAzrf9YLCw170qy-TMMJQ9rTDMkUoeGPUqNTYd7GvkCCfQA/viewform" target="_blank" class="btn">🚛 Rec. Veículos (Form)</a>
+            <a href="https://docs.google.com/spreadsheets/d/1YmCUTsgfsLrxU77s-2FU1PvJ6fU5XAgMIV7V2jACqpI/edit#gid=1887136687" target="_blank" class="btn">📋 Veículos Recebidos</a>
+            <a href="https://docs.google.com/spreadsheets/d/16fQd77vKAx4h6LQBEUIUOmpmNfu1vWC0Zawo-DnOZ_E/edit?gid=0" target="_blank" class="btn">🧾 Lançar NF</a>
+            <a href="https://docs.google.com/spreadsheets/d/1tsqX2qD2DD0kbpCxoKss0bFSMrLWtskCrzOLXtCfxoQ/edit?gid=0" target="_blank" class="btn">🔄 Troca de Turno</a>
+            <a href="https://drive.google.com/drive/folders/1quzTh5dpHfVHOVUi8Kdy3fijzvXaEm16" target="_blank" class="btn">📁 Drive de Notas</a>
+        </div>
+    </div>
+
+    <div class="category-card cat-sistemas">
+        <h2>💻 Sistemas & Acessos</h2>
+        <div class="link-grid">
+            <a href="https://aqajcsarp.accounts.ondemand.com/saml2/idp/acs/aqajcsarp.accounts.ondemand.com" target="_blank" class="btn">🌐 SAP / SAML Login</a>
+            <a href="https://app.ahgora.com.br/externo/" target="_blank" class="btn">⌚ My Ahgora (Ponto)</a>
+            <a href="https://drive.google.com/file/d/1Kp1J5cYux3Q4YMWcft22Kk9dmVHRbqLR/view" target="_blank" class="btn">🏷️ Zebra Designer</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    Dashboard Logístico Integrado © 2026 - v3.0
+</div>
+
+</body>
+</html>
